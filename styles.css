@@ -1,2 +1,36 @@
+.video-player {
+    width: 640px;
+    margin: auto;
+}
 
-/* Your CSS Code here. */
+.video {
+    width: 100%;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.progress {
+    width: 200px;
+    height: 5px;
+    background-color: #ccc;
+    margin: 0 10px;
+}
+
+.progress__filled {
+    background-color: blue;
+    height: 100%;
+    width: 0;
+}
+
+.player__button {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.skip-button {
+    margin: 0 5px;
+}
