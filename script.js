@@ -64,3 +64,19 @@ document.addEventListener('DOMContentLoaded', function() {
         video.currentTime = (progress / 100) * video.duration;
     });
 });
+
+describe('Video Speed Controller', () => {
+  beforeEach(() => {
+    cy.visit('your-video-player-url');
+  });
+
+  it('should load the video player', () => {
+    cy.get('.player__video', { timeout: 10000 }).should('be.visible');
+  });
+
+  it('should rewind the video', () => {
+    cy.get('.rewind', { timeout: 10000 }).should('be.visible').click();
+    // Assuming rewind functionality is triggered by clicking .rewind
+    cy.get('.player__video').invoke('prop', 'currentTime').should('be.lt', 10); // Example assertion
+  });
+});
