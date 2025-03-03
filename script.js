@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const rewindButton = document.getElementById('rewindButton');
     const forwardButton = document.getElementById('forwardButton');
 
+    // Automatically start video for testing purposes
+    // video.play(); // Uncomment if needed for tests
+
     // Toggle Play/Pause
     function togglePlay() {
         if (video.paused || video.ended) {
